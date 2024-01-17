@@ -46,8 +46,8 @@ L <- function(j, N) {
   if (j*h < 1 || j*h > 2) {
     return(0)
   } else {
-    a <- (j-1)*h
-    b <- (j+1)*h
+    a <- max(1, (j-1)*h)
+    b <- min(2, (j+1)*h)
     integral <- ((a-b)/2) * (e(j, (b-a)/(2*sqrt(3)) + (a+b)/2, N)
                            + e(j, (a-b)/(2*sqrt(3)) + (a+b)/2, N))
     return(4*pi*6.6743e-11 * integral)
@@ -58,8 +58,8 @@ B_tilde <- function(j, N) {
   h <- 3/N
   a <- (j-1)*h
   b <- (j+1)*h
-  integral <- ((a-b)/2) * (e(j, (b-a)/(2*sqrt(3)) + (a+b)/2, N)
-                         + e(j, (a-b)/(2*sqrt(3)) + (a+b)/2, N))
+  integral <- ((a-b)/2) * (de(j, (b-a)/(2*sqrt(3)) + (a+b)/2, N)
+                         + de(j, (a-b)/(2*sqrt(3)) + (a+b)/2, N))
   return(integral/3)
 }
 

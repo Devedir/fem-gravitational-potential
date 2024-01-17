@@ -146,7 +146,7 @@ Podobnie \(L(e_j) = 0\) zawsze, gdy \(hj < 1 \text{ lub } hj > 2\).\\
 W przeciwnym wypadku:
 \[L(e_j) = 4 \pi G \int_{x_{j-1}}^{x_{j+1}} e_j\ dx \text{ dla } j=1,2,\ldots,N-1\]
 Pozostało do rozważenia: \(\left(\text{wiedząc, że } \tilde{\Phi}' = -\frac{1}{3}\right)\)
-\[B(\tilde{\Phi}, e_j) = \frac{1}{3} \int_{x_{j-1}}^{x_{j+1}} e_j\ dx \text{ dla } j=1,2,\ldots,N-1\]
+\[B(\tilde{\Phi}, e_j) = \frac{1}{3} \int_{x_{j-1}}^{x_{j+1}} e'_j\ dx \text{ dla } j=1,2,\ldots,N-1\]
 
 Aby zastosować kwadraturę Gaussa-Legendre'a do przybliżenia wartości całek muszę zamienić przedziały całkowania na \([-1,1]\). Można to zrobić tak:
 \[\int_a^b f(x)dx = \int_{-1}^1 f\left(\frac{b-a}{2} t + \frac{a+b}{2}\right)\frac{b-a}{2}\ dt\]
@@ -168,9 +168,24 @@ Przy znalezionych \(w_0, w_1, \ldots, w_N\) ostatecznym rozwiązaniem jest:
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\linewidth]{graph.png}
+    \includegraphics[width=1\linewidth]{graph1.png}
     \caption{Wyrysowany wykres dla \(N=20\)}
-    \label{fig:enter-label}
+    \label{fig:graph1}
 \end{figure}
+
+\newpage
+\noindent
+Duży wpływ na kształt wykresu ma bardzo mała wartość \(G \approx 6.6743 \cdot 10^{-11}\).\\
+Gdybym w jej miejsce przyjął wartość \(6.6743 \cdot 10^{-2}\) otrzymałbym:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{graph2.png}
+    \caption{Wyrysowany wykres dla \(G=6.6743 \cdot 10^{-2},\ N=20\)}
+    \label{fig:graph2}
+\end{figure}
+
+\noindent
+Widać więc, że nie jest to funkcja liniowa.
 
 \end{document}
